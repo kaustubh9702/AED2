@@ -437,7 +437,7 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         p.setCreatePassword(CreatePassword);
         p.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Patient Details Created and the Patient ID is ");
+        JOptionPane.showMessageDialog(this, "New Patient Details Created and the Patient ID is " + PersonID);
 
         txtPersonID.setText("");
         txtNameSignUp.setText("");

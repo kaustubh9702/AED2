@@ -138,7 +138,7 @@ public class AdminLogin extends javax.swing.JFrame {
             if ((String.valueOf(selectedSignUp.getCommunity()).equals(txtHospitalID.getText())) && (String.valueOf(selectedSignUp.getCreatePassword()).equals(txtPassword.getText())))
             {
                 JOptionPane.showMessageDialog(this, "Admin identified");
-                new IndividualCommunityFrame (SignUpDirectory, HospitalDirectory, txtHospitalID.getText(),DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+                new AdminFunctionality (SignUpDirectory, HospitalDirectory, txtHospitalID.getText(),DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
                 this.dispose();
                 break;
             }
