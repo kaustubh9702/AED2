@@ -57,7 +57,6 @@ public class IndividualCommunityFrame extends javax.swing.JFrame {
 
         splitHospitalPane = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        btnCreateDoctor = new javax.swing.JButton();
         btnDoctorRecords = new javax.swing.JButton();
         btnCreatePatient = new javax.swing.JButton();
         PatientRecords = new javax.swing.JButton();
@@ -65,13 +64,6 @@ public class IndividualCommunityFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        btnCreateDoctor.setText("Create Doctor");
-        btnCreateDoctor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateDoctorActionPerformed(evt);
-            }
-        });
 
         btnDoctorRecords.setText("Doctor Records");
         btnDoctorRecords.addActionListener(new java.awt.event.ActionListener() {
@@ -110,8 +102,7 @@ public class IndividualCommunityFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(btnCreatePatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDoctorRecords, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCreateDoctor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnDoctorRecords, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(PatientRecords))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,9 +114,7 @@ public class IndividualCommunityFrame extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(btnCreateDoctor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(73, 73, 73)
                 .addComponent(btnDoctorRecords)
                 .addGap(18, 18, 18)
                 .addComponent(btnCreatePatient)
@@ -167,12 +156,6 @@ public class IndividualCommunityFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnCreateDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateDoctorActionPerformed
-        // TODO add your handling code here:
-        CreateHADoctorJPanel loginuserpanel = new CreateHADoctorJPanel(SignUpDirectory, HospitalDirectory, HID, DoctorDirectory, PatientDirectory);
-        splitHospitalPane.setRightComponent(loginuserpanel);
-    }//GEN-LAST:event_btnCreateDoctorActionPerformed
 
     private void btnDoctorRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorRecordsActionPerformed
         // TODO add your handling code here:
@@ -230,7 +213,6 @@ public class IndividualCommunityFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton PatientRecords;
-    private javax.swing.JButton btnCreateDoctor;
     private javax.swing.JButton btnCreatePatient;
     private javax.swing.JButton btnDoctorRecords;
     private javax.swing.JButton btnLogOut;

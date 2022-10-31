@@ -84,7 +84,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "PersonID", "Name", "DoB", "Age", "Address", "City", "State", "Pin Code", "Password"
+                "PersonID", "Name", "DoB", "Age", "Address", "Community", "Role", "Pin Code", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -151,7 +151,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
 
         lblAddress.setText("Address:");
 
-        lblCity.setText("City:");
+        lblCity.setText("Community");
 
         txtAgeSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -159,7 +159,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblState.setText("State:");
+        lblState.setText("Role");
 
         txtAddressSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

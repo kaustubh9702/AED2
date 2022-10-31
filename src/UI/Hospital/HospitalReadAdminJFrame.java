@@ -121,7 +121,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
-        lblState.setText("State:");
+        lblState.setText("Role");
 
         txtConfirmPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +202,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "HospitalID", "Hospital Name", "Community Admin Name", "Community", "State", "Pin Code", "Password"
+                "HospitalID", "Hospital Name", "Community Admin Name", "Community", "Role", "Pin Code", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {

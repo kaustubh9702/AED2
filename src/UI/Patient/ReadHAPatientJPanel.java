@@ -132,7 +132,7 @@ public class ReadHAPatientJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Hospital Name", "Hospital ID", "PatientID", "Patient's Name", "PersonID", "Age", "Address", "City", "State", "Pin Code", "Password"
+                "Hospital Name", "Hospital ID", "PatientID", "Patient's Name", "PersonID", "Age", "Address", "Community", "Role", "Pin Code", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -224,9 +224,9 @@ public class ReadHAPatientJPanel extends javax.swing.JPanel {
 
         lblAddress.setText("Address:");
 
-        lblCity.setText("City:");
+        lblCity.setText("Community");
 
-        lblState.setText("State:");
+        lblState.setText("Role");
 
         lblPinCode.setText("Pin Code:");
 

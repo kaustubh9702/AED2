@@ -163,9 +163,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
 
         lblAddress.setText("Address:");
 
-        lblCity.setText("City:");
+        lblCity.setText("Community");
 
-        lblState.setText("State:");
+        lblState.setText("Role");
 
         lblPinCode.setText("Pin Code:");
 

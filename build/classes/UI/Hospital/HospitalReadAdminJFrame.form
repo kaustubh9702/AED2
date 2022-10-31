@@ -178,7 +178,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblState">
       <Properties>
-        <Property name="text" type="java.lang.String" value="State:"/>
+        <Property name="text" type="java.lang.String" value="Role"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtConfirmPassword">
@@ -268,7 +268,7 @@
                 <Column editable="false" title="Hospital Name" type="java.lang.Object"/>
                 <Column editable="false" title="Community Admin Name" type="java.lang.Object"/>
                 <Column editable="false" title="Community" type="java.lang.Object"/>
-                <Column editable="false" title="State" type="java.lang.Object"/>
+                <Column editable="false" title="Role" type="java.lang.Object"/>
                 <Column editable="false" title="Pin Code" type="java.lang.Object"/>
                 <Column editable="false" title="Password" type="java.lang.Object"/>
               </Table>

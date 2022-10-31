@@ -218,12 +218,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
-        <Property name="text" type="java.lang.String" value="City:"/>
+        <Property name="text" type="java.lang.String" value="Community"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblState">
       <Properties>
-        <Property name="text" type="java.lang.String" value="State:"/>
+        <Property name="text" type="java.lang.String" value="Role"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblPinCode">

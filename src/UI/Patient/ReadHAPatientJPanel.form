@@ -246,8 +246,8 @@
                 <Column editable="false" title="PersonID" type="java.lang.Object"/>
                 <Column editable="false" title="Age" type="java.lang.Object"/>
                 <Column editable="false" title="Address" type="java.lang.Object"/>
-                <Column editable="false" title="City" type="java.lang.Object"/>
-                <Column editable="false" title="State" type="java.lang.Object"/>
+                <Column editable="false" title="Community" type="java.lang.Object"/>
+                <Column editable="false" title="Role" type="java.lang.Object"/>
                 <Column editable="false" title="Pin Code" type="java.lang.Object"/>
                 <Column editable="false" title="Password" type="java.lang.Object"/>
               </Table>
@@ -405,12 +405,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
-        <Property name="text" type="java.lang.String" value="City:"/>
+        <Property name="text" type="java.lang.String" value="Community"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblState">
       <Properties>
-        <Property name="text" type="java.lang.String" value="State:"/>
+        <Property name="text" type="java.lang.String" value="Role"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblPinCode">
