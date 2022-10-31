@@ -29,6 +29,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    public String DID;
     public ReadVitalsJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory,String DID, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
@@ -37,12 +38,14 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.DID = DID;
         for(Doctor selectedSignUp : DoctorDirectory.getDoctorDirectory()){
             if (String.valueOf(selectedSignUp.getDoctorID()).equals(DID)){
             txtDoctorID.setText(String.valueOf(selectedSignUp.getDoctorID()));
             txtDoctorName.setText(String.valueOf(selectedSignUp.getDoctorName())); 
             }
         }
+        
         populateTable();
     }
 
@@ -139,6 +142,11 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         jLabel4.setText("Patient's Name:");
 
         txtPatientName.setEditable(false);
+        txtPatientName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientNameActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Encounter ID:");
 
@@ -456,6 +464,10 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateSignUpKeyPressed
 
+    private void txtPatientNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientNameActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPersonDelete;
@@ -490,12 +502,38 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtTimeStamp;
     // End of variables declaration//GEN-END:variables
 
+//    private void populateTable() {
+//     DefaultTableModel model = (DefaultTableModel) tblVitalsDirectory.getModel();
+//        model.setRowCount(0);
+//        
+//        for (Vitals su : VitalsDirectory.getVitalsDirectory()){
+//            if (String.valueOf(su.getEncounterID()).equals(txtEncounterID.getText())){
+//            Object[] row = new Object[13];
+//            row[0] = su;
+//            row[1] = su.getVitalID();
+//            row[2] = su.getDoctorID();
+//            row[3] = su.getPatientName();
+//            row[4] = su.getEncounterID();
+//            row[5] = su.getPatientID();
+//            row[6] = su.getDate();
+//            row[7] = su.getTimeStamp();
+//            row[8] = su.getTemperature();
+//            row[9] = su.getHeartRate();
+//            row[10] = su.getBPS();
+//            row[11] = su.getBPD();
+//            
+//            model.addRow(row);
+//            }
+//        }
+//    }   
     private void populateTable() {
      DefaultTableModel model = (DefaultTableModel) tblVitalsDirectory.getModel();
         model.setRowCount(0);
         
-        for (Vitals su : VitalsDirectory.getVitalsDirectory()){
-            if (String.valueOf(su.getEncounterID()).equals(txtEncounterID.getText())){
+        for(Doctor selectedSignUp : DoctorDirectory.getDoctorDirectory()){
+             if (String.valueOf(selectedSignUp.getDoctorID()).equals(DID)){
+                for (Vitals su : VitalsDirectory.getVitalsDirectory()){
+             
             Object[] row = new Object[13];
             row[0] = su;
             row[1] = su.getVitalID();
@@ -514,4 +552,5 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
             }
         }
     }   
+}
 }
