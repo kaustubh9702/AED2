@@ -68,7 +68,7 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblCity.setText("City:");
+        lblCity.setText("Community Name");
 
         jLabel7.setText("State:");
 
@@ -76,7 +76,7 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
 
         lblPinCode.setText("Pin Code:");
 
-        lblCommunity.setText("Community:");
+        lblCommunity.setText("Community Admin name");
 
         jLabel1.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         jLabel1.setText("Create Credentials for a new  Community Admin ");

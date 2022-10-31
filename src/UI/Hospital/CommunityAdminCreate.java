@@ -69,7 +69,7 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
 
         lblHospitalName.setText("Name of the Hospital:");
 
-        lblCommunity.setText("Community:");
+        lblCommunity.setText("Community Admin Name");
 
         lblCreatePassword.setText("Create Password:");
 
@@ -82,7 +82,7 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
             }
         });
 
-        lblCity.setText("City:");
+        lblCity.setText("Community Name");
 
         jLabel7.setText("State:");
 

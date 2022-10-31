@@ -116,7 +116,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
-        <Property name="text" type="java.lang.String" value="City:"/>
+        <Property name="text" type="java.lang.String" value="Community Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -140,7 +140,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblCommunity">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Community:"/>
+        <Property name="text" type="java.lang.String" value="Community Admin name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCity">

@@ -108,7 +108,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
-        lblCity.setText("City:");
+        lblCity.setText("Community Name");
 
         txtCreatePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,7 +174,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
 
         lblConfirmPassword.setText("Confirm Password:");
 
-        lblDoB.setText("Community:");
+        lblDoB.setText("Community Admin Name");
 
         lblName.setText("Name of the Hospital:");
 
@@ -202,7 +202,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "HospitalID", "Hospital Name", "Community", "City", "State", "Pin Code", "Password"
+                "HospitalID", "Hospital Name", "Community Admin Name", "Community", "State", "Pin Code", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -276,9 +276,12 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtSearchHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))
+                        .addComponent(txtSearchHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(51, 51, 51))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
