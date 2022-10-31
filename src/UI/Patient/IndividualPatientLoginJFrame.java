@@ -12,6 +12,7 @@ import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
 import UI.Encounter.EncounterRecordsJPanel;
+import UI.SystemAdmin.MainJFrame;
 
 
 public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
@@ -56,14 +57,14 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnRaiseEncounter.setText("Raise Encounter");
+        btnRaiseEncounter.setText("Create Appointment");
         btnRaiseEncounter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRaiseEncounterActionPerformed(evt);
             }
         });
 
-        btnEncounterRecords.setText("<html>\n<center>\nEncounter <br> Records\n</center>\n</html>");
+        btnEncounterRecords.setText("<html> <center> View all <br> Records </center> </html>");
         btnEncounterRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEncounterRecordsActionPerformed(evt);
@@ -144,7 +145,7 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEncounterRecordsActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new PatientLoginJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        new MainJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogOutActionPerformed
 

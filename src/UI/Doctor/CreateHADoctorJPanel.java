@@ -102,7 +102,7 @@ public class CreateHADoctorJPanel extends javax.swing.JPanel {
 
         lblAddress.setText("Address:");
 
-        lblCity.setText("City:");
+        lblCity.setText("Role");
 
         lblState.setText("State:");
 

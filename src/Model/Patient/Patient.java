@@ -4,6 +4,8 @@
  */
 package Model.Patient;
 
+import Model.Doctor.Doctor;
+
 
 public class Patient {
     

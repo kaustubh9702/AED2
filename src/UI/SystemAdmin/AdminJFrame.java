@@ -66,12 +66,12 @@ public class AdminJFrame extends javax.swing.JFrame {
         btnCreateDoctor = new javax.swing.JButton();
         btnCreatePatient = new javax.swing.JButton();
         btnPatientRecords = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +79,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCreate.setText("<html> <center> Create <br> Hospital </center> </html>");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +87,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnReadPerson.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnReadPerson.setText("<html> <center> Manage <br> Person <br> Records </center> </html>");
         btnReadPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +95,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnReadHospital.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnReadHospital.setText("<html> <center> Manage <br> Hospital <br> Records </center> </html>");
         btnReadHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +103,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnDoctorRecords.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDoctorRecords.setText("<html>\n<center>\nDoctor <br> Records\n</center>\n</html>");
         btnDoctorRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +111,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreateDoctor.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCreateDoctor.setText("<html>\n<center>\nCreate <br> Doctor\n</center>\n</html>");
         btnCreateDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +119,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreatePatient.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCreatePatient.setText("<html> <center> Create <br> Patient </center> </html>");
         btnCreatePatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +127,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnPatientRecords.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPatientRecords.setText("<html> <center> Patient <br> Records </center> </html>");
         btnPatientRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,13 +135,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Community");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
+        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton2.setText("All Admins");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,19 +153,16 @@ public class AdminJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCreatePatient)
                     .addComponent(btnPatientRecords)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnReadPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(btnCreateDoctor, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(btnReadHospital, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE))
-                            .addComponent(btnDoctorRecords, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnDoctorRecords, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReadPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -185,10 +183,8 @@ public class AdminJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPatientRecords, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addGap(51, 51, 51)
                 .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(177, Short.MAX_VALUE))
         );
@@ -270,11 +266,6 @@ public class AdminJFrame extends javax.swing.JFrame {
         adminSplitPane.setRightComponent(loginuserpanel);
     }//GEN-LAST:event_btnPatientRecordsActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        new CommunityAdminCreate(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
          new HospitalReadAdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
@@ -325,7 +316,6 @@ public class AdminJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnPatientRecords;
     private javax.swing.JButton btnReadHospital;
     private javax.swing.JButton btnReadPerson;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

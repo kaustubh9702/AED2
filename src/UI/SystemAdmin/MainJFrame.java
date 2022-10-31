@@ -72,6 +72,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPaneMain.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        btnAdmin.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         btnAdmin.setText("Log In as Admin");
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +80,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCustomer.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         btnCustomer.setText("Users");
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +91,7 @@ public class MainJFrame extends javax.swing.JFrame {
         lblHospitalManagementSystem.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
         lblHospitalManagementSystem.setText("Hospital Management System");
 
+        btnSignUp.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         btnSignUp.setText("Sign Up");
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

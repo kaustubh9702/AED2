@@ -91,6 +91,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnAdmin">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tw Cen MT" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Log In as Admin"/>
               </Properties>
               <Events>
@@ -99,6 +102,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnCustomer">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tw Cen MT" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Users"/>
               </Properties>
               <Events>
@@ -115,6 +121,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnSignUp">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tw Cen MT" size="16" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sign Up"/>
               </Properties>
               <Events>

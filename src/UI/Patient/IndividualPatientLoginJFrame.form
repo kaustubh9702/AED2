@@ -75,7 +75,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnRaiseEncounter">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Raise Encounter"/>
+                <Property name="text" type="java.lang.String" value="Create Appointment"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRaiseEncounterActionPerformed"/>
@@ -83,7 +83,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnEncounterRecords">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;center&gt;&#xa;Encounter &lt;br&gt; Records&#xa;&lt;/center&gt;&#xa;&lt;/html&gt;"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;center&gt; View all &lt;br&gt; Records &lt;/center&gt; &lt;/html&gt;"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEncounterRecordsActionPerformed"/>

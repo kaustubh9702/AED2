@@ -12,6 +12,7 @@ import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
 import UI.Hospital.Login;
 import UI.Patient.ReadHAPatientJPanel;
+import UI.SystemAdmin.MainJFrame;
 import UI.SystemAdmin.ReadAdminJPanel;
 
 /**
@@ -165,7 +166,7 @@ public class AdminFunctionality extends javax.swing.JFrame {
     }//GEN-LAST:event_PatientRecordsActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new Login(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogOutActionPerformed
 

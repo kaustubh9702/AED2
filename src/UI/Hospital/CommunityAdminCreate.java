@@ -12,6 +12,7 @@ import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
 import UI.SystemAdmin.AdminJFrame;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 
 
@@ -69,12 +70,19 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
 
         lblHospitalName.setText("Name of the Hospital:");
 
+        txtPinCode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPinCodeActionPerformed(evt);
+            }
+        });
+
         lblCommunity.setText("Community Admin Name");
 
         lblCreatePassword.setText("Create Password:");
 
         lblConfirmPassword.setText("Confirm Password:");
 
+        btnSubmit.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,15 +90,22 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
             }
         });
 
+        txtHospitalName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHospitalNameActionPerformed(evt);
+            }
+        });
+
         lblCity.setText("Community Name");
 
-        jLabel7.setText("State:");
+        jLabel7.setText("Role");
 
         lblPinCode.setText("Pin Code:");
 
         jLabel1.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        jLabel1.setText("Create Records for a new Hospital and its Hospital Admin ");
+        jLabel1.setText("Create Records for a new Hospital and Community Admin");
 
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,18 +120,23 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSubmit)
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLogOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblHospitalName)
-                                    .addComponent(lblCommunity)
-                                    .addComponent(lblCreatePassword)
-                                    .addComponent(lblConfirmPassword)
-                                    .addComponent(lblCity)
+                                .addGap(57, 57, 57)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblCommunity)
+                                        .addComponent(lblHospitalName, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblCity, javax.swing.GroupLayout.Alignment.LEADING))
                                     .addComponent(jLabel7)
-                                    .addComponent(lblPinCode))
+                                    .addComponent(lblPinCode)
+                                    .addComponent(lblCreatePassword)
+                                    .addComponent(lblConfirmPassword))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtState, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
@@ -125,12 +145,11 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
                                     .addComponent(txtConfirmPassword)
                                     .addComponent(txtHospitalName)
                                     .addComponent(txtCommunity)
-                                    .addComponent(txtCity)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnLogOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(txtCity)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(227, 227, 227)
+                                .addComponent(btnSubmit)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -139,7 +158,7 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHospitalName)
@@ -168,9 +187,9 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblConfirmPassword)
                     .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(btnSubmit)
-                .addContainerGap(443, Short.MAX_VALUE))
+                .addContainerGap(432, Short.MAX_VALUE))
         );
 
         pack();
@@ -178,6 +197,43 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
+        if (!(Pattern.matches("^([0-9]{5})$", txtPinCode.getText())))
+        {
+          JOptionPane.showMessageDialog(null, "Pin Code should be 5 digits only!", "Error", JOptionPane.ERROR_MESSAGE);
+         
+        }
+        else if (!Pattern.matches("^(([a-z]|[0-9]|[A-Z]){5})$", txtCreatePassword.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else if (!txtCreatePassword.getText().equals(txtConfirmPassword.getText()))
+        {
+                    
+             JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+        }
+        else if (Pattern.matches("^$", txtCreatePassword.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "Password cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+            
+         }
+        else if (Pattern.matches("^$", txtCity.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "City cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+            
+         }
+        else if (Pattern.matches("^$", txtState.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "State cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else if (Pattern.matches("^$", txtPinCode.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "Pin Code cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else {
         String HospitalName = txtHospitalName.getText();
         String Community = txtCommunity.getText();
         String City = txtCity.getText();
@@ -196,7 +252,7 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
         h.setCreatePassword(CreatePassword);
         h.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Hospital Details Created and your Hospital ID is ");
+        JOptionPane.showMessageDialog(this, "Credentials created! ");
 
         txtHospitalName.setText("");
         txtCommunity.setText("");
@@ -205,13 +261,22 @@ public class CommunityAdminCreate extends javax.swing.JFrame {
         txtPinCode.setText("");
         txtCreatePassword.setText("");
         txtConfirmPassword.setText("");
-
+        }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
         new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogOutActionPerformed
+
+    private void txtPinCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPinCodeActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtPinCodeActionPerformed
+
+    private void txtHospitalNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHospitalNameActionPerformed
 
     /**
      * @param args the command line arguments

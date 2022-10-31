@@ -60,6 +60,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
 
         lblPassword.setText("Password:");
 
+        btnLogIn.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogIn.setText("Log In");
         btnLogIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

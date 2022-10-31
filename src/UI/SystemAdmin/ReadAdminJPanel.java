@@ -97,6 +97,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblPersonDirectory);
 
+        btnPersonView.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPersonView.setText("View");
         btnPersonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +105,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPersonDelete.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPersonDelete.setText("Delete");
         btnPersonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,6 +126,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
 
         lblDoB.setText("DoB:");
 
+        btnUpdateSignUp.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateSignUp.setText("Update");
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
