@@ -147,6 +147,7 @@ public class CreatePatient extends javax.swing.JPanel {
             }
         });
 
+        btnFetch.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnFetch.setText("Fetch");
         btnFetch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,6 +170,7 @@ public class CreatePatient extends javax.swing.JPanel {
 
         jLabel2.setText("Hospital ID:");
 
+        btnSubmit.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,10 +202,6 @@ public class CreatePatient extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -233,28 +231,31 @@ public class CreatePatient extends javax.swing.JPanel {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(txtHospitalName, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtNameSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                            .addComponent(txtAgeSignUp)
-                                            .addComponent(txtAddressSignUp)
-                                            .addComponent(txtCitySignUp)
-                                            .addComponent(txtStateSignUp)
-                                            .addComponent(txtPinCodeSignUp)
-                                            .addComponent(txtCreatePasswordDoctor)
-                                            .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                            .addComponent(txtPersonID, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                            .addComponent(txtHospitalID)))))
+                                        .addComponent(txtNameSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                        .addComponent(txtAgeSignUp)
+                                        .addComponent(txtAddressSignUp)
+                                        .addComponent(txtCitySignUp)
+                                        .addComponent(txtStateSignUp)
+                                        .addComponent(txtPinCodeSignUp)
+                                        .addComponent(txtCreatePasswordDoctor)
+                                        .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                        .addComponent(txtPersonID, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                        .addComponent(txtHospitalID))))
                             .addComponent(lblName1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnFetch)
                         .addGap(81, 81, 81))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(157, 157, 157)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtHospitalID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -417,7 +418,7 @@ public class CreatePatient extends javax.swing.JPanel {
         p.setCreatePassword(CreatePassword);
         p.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Patient Details Created and the Patient ID is " + PersonID);
+        JOptionPane.showMessageDialog(this, "New Patient Details Created!");
 
         txtPersonID.setText("");
         txtNameSignUp.setText("");

@@ -55,13 +55,13 @@ public class AdminFunctionality extends javax.swing.JFrame {
         splitHospitalPane = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         btnCreatePatient = new javax.swing.JButton();
-        PatientRecords = new javax.swing.JButton();
         btnLogOut = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnCreatePatient.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCreatePatient.setText("Create Patient");
         btnCreatePatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,13 +69,7 @@ public class AdminFunctionality extends javax.swing.JFrame {
             }
         });
 
-        PatientRecords.setText("Patient Records");
-        PatientRecords.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PatientRecordsActionPerformed(evt);
-            }
-        });
-
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +77,7 @@ public class AdminFunctionality extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton1.setText("Verify Records");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,8 +93,7 @@ public class AdminFunctionality extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCreatePatient, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PatientRecords, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -114,9 +108,7 @@ public class AdminFunctionality extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCreatePatient)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(PatientRecords)
-                .addContainerGap(643, Short.MAX_VALUE))
+                .addContainerGap(678, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(377, 377, 377)
@@ -158,12 +150,6 @@ public class AdminFunctionality extends javax.swing.JFrame {
         CreatePatient loginuserpanel = new CreatePatient(SignUpDirectory, HospitalDirectory, HID, DoctorDirectory, PatientDirectory);
         splitHospitalPane.setRightComponent(loginuserpanel);
     }//GEN-LAST:event_btnCreatePatientActionPerformed
-
-    private void PatientRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatientRecordsActionPerformed
-        // TODO add your handling code here:
-        ReadHAPatientJPanel loginuserpanel = new ReadHAPatientJPanel(SignUpDirectory, HospitalDirectory, HID, DoctorDirectory, PatientDirectory);
-        splitHospitalPane.setRightComponent(loginuserpanel);
-    }//GEN-LAST:event_PatientRecordsActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
         new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
@@ -212,7 +198,6 @@ public class AdminFunctionality extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton PatientRecords;
     private javax.swing.JButton btnCreatePatient;
     private javax.swing.JButton btnLogOut;
     private javax.swing.JButton jButton1;

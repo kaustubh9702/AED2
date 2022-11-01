@@ -76,6 +76,7 @@ public class PersonJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblCity.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCity.setText("City:");
 
         txtAgeSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -84,6 +85,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblState.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblState.setText("Role");
 
         txtAddressSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -92,6 +94,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblPinCode.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblPinCode.setText("Pin Code:");
 
         txtCitySignUp.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -117,10 +120,13 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblCreatePassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCreatePassword.setText("Update Password:");
 
+        lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblConfirmPassword.setText("Confirm Password:");
 
+        lblName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblName.setText("Name:");
 
         txtCreatePasswordSignUp.addActionListener(new java.awt.event.ActionListener() {
@@ -156,8 +162,10 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblDoB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblDoB.setText("DoB:");
 
+        btnUpdateSignUp.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateSignUp.setText("Update");
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +178,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblAge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAge.setText("Age:");
 
         txtDoBSignUp.addActionListener(new java.awt.event.ActionListener() {
@@ -183,10 +192,13 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblAddress.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblAddress.setText("Address:");
 
+        lblName1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblName1.setText("Person ID:");
 
+        lblName2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblName2.setText("Password:");
 
         txtPersonID.addActionListener(new java.awt.event.ActionListener() {
@@ -200,6 +212,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnFetch.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnFetch.setText("Fetch");
         btnFetch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,6 +220,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,7 +267,7 @@ public class PersonJFrame extends javax.swing.JFrame {
                             .addComponent(txtCreatePasswordSignUp)
                             .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))
                     .addComponent(btnUpdateSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)

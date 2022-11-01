@@ -95,6 +95,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnCreateDoctor">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Create Doctor"/>
               </Properties>
               <Events>
@@ -103,6 +106,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnDoctorRecords">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Doctor Records"/>
               </Properties>
               <Events>
@@ -111,6 +117,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnCreatePatient">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Create Patient"/>
               </Properties>
               <Events>
@@ -119,6 +128,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="PatientRecords">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Patient Records"/>
               </Properties>
               <Events>
@@ -127,6 +139,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnLogOut">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Log Out"/>
               </Properties>
               <Events>
@@ -135,6 +150,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Verify Records"/>
               </Properties>
               <Events>

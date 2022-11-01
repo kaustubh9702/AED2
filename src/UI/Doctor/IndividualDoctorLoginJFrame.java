@@ -10,6 +10,7 @@ import Model.Hospital.HospitalDirectory;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
+import UI.SystemAdmin.MainJFrame;
 import UI.Vitals.CreateVitalsJPanel;
 import UI.Vitals.ReadVitalsJPanel;
 
@@ -56,6 +57,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnCreateVitals.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCreateVitals.setText("Create Vitals");
         btnCreateVitals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +65,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnViewVitalsHistory.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnViewVitalsHistory.setText("<html>\n<center>\nView <br> Vitals <br> History\n</center>\n</html>");
         btnViewVitalsHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +73,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +150,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreateVitalsActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new DoctorLoginJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        new MainJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 

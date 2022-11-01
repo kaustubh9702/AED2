@@ -11,6 +11,7 @@ import Model.Patient.Patient;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUp;
 import Model.SignUp.SignUpDirectory;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 
 
@@ -164,6 +165,7 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFetch.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnFetch.setText("Fetch");
         btnFetch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +175,7 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
 
         jLabel2.setText("Hospital ID:");
 
+        btnSubmit.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,10 +223,6 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -268,13 +267,17 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnFetch)
                         .addGap(81, 81, 81))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtHospitalID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -410,7 +413,17 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
+        if (!Pattern.matches("^(([a-z]|[0-9]){5})$", txtCreatePasswordDoctor.getText()))
+            {
+                JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+                
+            }
+            else if (!txtCreatePasswordDoctor.getText().equals(txtConfirmPasswordDoctor.getText()))
+            {
 
+                JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
         int HospitalID = Integer.parseInt(txtHospitalID.getText());
         String HospitalName = txtHospitalName.getText();
         int PersonID = Integer.parseInt(txtPersonID.getText());
@@ -448,6 +461,7 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         txtPinCodeSignUp.setText("");
         txtCreatePasswordDoctor.setText("");
         txtConfirmPasswordDoctor.setText("");
+            }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void txtHospitalIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalIDActionPerformed

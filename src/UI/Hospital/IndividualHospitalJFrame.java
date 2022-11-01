@@ -14,6 +14,7 @@ import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
 import UI.Patient.CreateHAPatientJPanel;
 import UI.Patient.ReadHAPatientJPanel;
+import UI.SystemAdmin.MainJFrame;
 import UI.SystemAdmin.ReadAdminJPanel;
 
 
@@ -61,6 +62,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnCreateDoctor.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCreateDoctor.setText("Create Doctor");
         btnCreateDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +70,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnDoctorRecords.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnDoctorRecords.setText("Doctor Records");
         btnDoctorRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +78,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreatePatient.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnCreatePatient.setText("Create Patient");
         btnCreatePatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +86,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        PatientRecords.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         PatientRecords.setText("Patient Records");
         PatientRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +94,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +102,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jButton1.setText("Verify Records");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +186,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreateDoctorActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new Login(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogOutActionPerformed
 

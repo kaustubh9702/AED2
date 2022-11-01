@@ -10,6 +10,7 @@ import Model.Hospital.HospitalDirectory;
 import Model.Patient.Patient;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -134,6 +135,7 @@ public class ReadSAPatientJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblPatientDirectory);
 
+        btnPersonView.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPersonView.setText("View");
         btnPersonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,6 +143,7 @@ public class ReadSAPatientJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPersonDelete.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPersonDelete.setText("Delete");
         btnPersonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +151,7 @@ public class ReadSAPatientJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUpdateSignUp.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateSignUp.setText("Update");
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -498,6 +502,19 @@ public class ReadSAPatientJPanel extends javax.swing.JPanel {
 
         DefaultTableModel model = (DefaultTableModel) tblPatientDirectory.getModel();
         Patient su = (Patient) model.getValueAt(tblPatientDirectory.getSelectedRow(), 0);
+        
+        if (!Pattern.matches("^(([a-z]|[0-9]|[A-Z]){5})$", txtCreatePasswordDoctor.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else if (!txtCreatePasswordDoctor.getText().equals(txtConfirmPasswordDoctor.getText()))
+        {
+                    
+             JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+        }
+        else{
 
         if (tblPatientDirectory.getSelectedRowCount()==1) {
 
@@ -554,6 +571,7 @@ public class ReadSAPatientJPanel extends javax.swing.JPanel {
             txtConfirmPasswordDoctor.setText("");
 
             populateTable();
+        }
         }
     }//GEN-LAST:event_btnUpdateSignUpActionPerformed
 

@@ -11,6 +11,7 @@ import Model.Hospital.HospitalDirectory;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUp;
 import Model.SignUp.SignUpDirectory;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -121,6 +122,7 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblDoctorDirectory);
 
+        btnPersonView.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPersonView.setText("View");
         btnPersonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +130,7 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPersonDelete.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPersonDelete.setText("Delete");
         btnPersonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +138,7 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUpdateSignUp.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateSignUp.setText("Update");
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -323,37 +327,39 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
                                     .addComponent(txtSearchPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(lblName, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblCreatePassword)
-                                        .addComponent(lblConfirmPassword)
-                                        .addComponent(lblAge)
-                                        .addComponent(lblCity)
-                                        .addComponent(lblAddress)
-                                        .addComponent(lblState)
-                                        .addComponent(lblPinCode))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtAgeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtAddressSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtCitySignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtStateSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtPinCodeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtCreatePasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblName1)
+                                    .addGap(307, 307, 307))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lblName1)
-                                            .addGap(57, 57, 57))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lblName2)
-                                            .addGap(59, 59, 59)))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(txtPersonID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtDoctorID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(lblName, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(lblCreatePassword)
+                                                        .addComponent(lblConfirmPassword)
+                                                        .addComponent(lblAge)
+                                                        .addComponent(lblCity)
+                                                        .addComponent(lblAddress)
+                                                        .addComponent(lblState)
+                                                        .addComponent(lblPinCode))
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                    .addComponent(lblName2)
+                                                    .addGap(50, 50, 50)))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(txtDoctorID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtAgeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtAddressSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtCitySignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtStateSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtPinCodeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtCreatePasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtPersonID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGap(9, 9, 9))))))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -506,7 +512,18 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
 
         DefaultTableModel model = (DefaultTableModel) tblDoctorDirectory.getModel();
         Doctor su = (Doctor) model.getValueAt(tblDoctorDirectory.getSelectedRow(), 0);
+         if (!Pattern.matches("^(([a-z]|[0-9]){5})$", txtCreatePasswordDoctor.getText()))
+            {
+                JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+                
+            }
+            else if (!txtCreatePasswordDoctor.getText().equals(txtConfirmPasswordDoctor.getText()))
+            {
 
+                JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+        
         if (tblDoctorDirectory.getSelectedRowCount()==1) {
             
             int DoctorID = Integer.parseInt(txtDoctorID.getText());
@@ -562,6 +579,7 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
             txtConfirmPasswordDoctor.setText("");
 
             populateTable();
+        }
     }//GEN-LAST:event_btnUpdateSignUpActionPerformed
     }
     private void btnUpdateSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnUpdateSignUpKeyPressed

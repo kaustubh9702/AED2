@@ -9,6 +9,7 @@ import Model.Doctor.DoctorDirectory;
 import Model.Hospital.HospitalDirectory;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -499,7 +500,19 @@ public class ReadSADoctorJPanel extends javax.swing.JPanel {
 
         DefaultTableModel model = (DefaultTableModel) tblDoctorDirectory.getModel();
         Doctor su = (Doctor) model.getValueAt(tblDoctorDirectory.getSelectedRow(), 0);
-
+        
+        if (!Pattern.matches("^(([a-z]|[0-9]|[A-Z]){5})$", txtCreatePasswordDoctor.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else if (!txtCreatePasswordDoctor.getText().equals(txtConfirmPasswordDoctor.getText()))
+        {
+                    
+             JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+        }
+        else{
         if (tblDoctorDirectory.getSelectedRowCount()==1) {
 
             int DoctorID = Integer.parseInt(txtDoctorID.getText());
@@ -555,6 +568,7 @@ public class ReadSADoctorJPanel extends javax.swing.JPanel {
             txtConfirmPasswordDoctor.setText("");
 
             populateTable();
+        }
         }
     }//GEN-LAST:event_btnUpdateSignUpActionPerformed
 

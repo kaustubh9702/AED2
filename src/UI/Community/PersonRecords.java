@@ -65,7 +65,6 @@ public class PersonRecords extends javax.swing.JPanel {
         btnPersonView = new javax.swing.JButton();
         txtNameSignUp = new javax.swing.JTextField();
         lblDoB = new javax.swing.JLabel();
-        btnUpdateSignUp = new javax.swing.JButton();
         txtPinCodeSignUp = new javax.swing.JTextField();
         lblCreatePassword = new javax.swing.JLabel();
         lblConfirmPassword = new javax.swing.JLabel();
@@ -142,6 +141,7 @@ public class PersonRecords extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblPersonDirectory);
 
+        btnPersonView.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnPersonView.setText("View");
         btnPersonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,18 +161,6 @@ public class PersonRecords extends javax.swing.JPanel {
         });
 
         lblDoB.setText("DoB:");
-
-        btnUpdateSignUp.setText("Update");
-        btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateSignUpActionPerformed(evt);
-            }
-        });
-        btnUpdateSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnUpdateSignUpKeyPressed(evt);
-            }
-        });
 
         txtPinCodeSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,33 +228,33 @@ public class PersonRecords extends javax.swing.JPanel {
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
                         .addComponent(txtSearchPerson))
-                    .addComponent(jLabel1)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPersonView)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnUpdateSignUp)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblCreatePassword)
-                                .addComponent(lblConfirmPassword)
-                                .addComponent(lblAge)
-                                .addComponent(lblCity)
-                                .addComponent(lblAddress)
-                                .addComponent(lblName)
-                                .addComponent(lblState)
-                                .addComponent(lblPinCode)
-                                .addComponent(lblDoB))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtAgeSignUp)
-                                .addComponent(txtAddressSignUp)
-                                .addComponent(txtCitySignUp)
-                                .addComponent(txtStateSignUp)
-                                .addComponent(txtDoBSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                .addComponent(txtPinCodeSignUp)
-                                .addComponent(txtNameSignUp)
-                                .addComponent(txtCreatePasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCreatePassword)
+                            .addComponent(lblConfirmPassword)
+                            .addComponent(lblAge)
+                            .addComponent(lblCity)
+                            .addComponent(lblAddress)
+                            .addComponent(lblName)
+                            .addComponent(lblState)
+                            .addComponent(lblPinCode)
+                            .addComponent(lblDoB))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtAgeSignUp)
+                            .addComponent(txtAddressSignUp)
+                            .addComponent(txtCitySignUp)
+                            .addComponent(txtStateSignUp)
+                            .addComponent(txtDoBSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(txtPinCodeSignUp)
+                            .addComponent(txtNameSignUp)
+                            .addComponent(txtCreatePasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(183, 183, 183)
+                        .addComponent(jLabel1)))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -318,9 +306,7 @@ public class PersonRecords extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblConfirmPassword)
                     .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnUpdateSignUp)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -330,27 +316,27 @@ public class PersonRecords extends javax.swing.JPanel {
 
     private void txtDoBSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDoBSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+       
     }//GEN-LAST:event_txtDoBSignUpKeyPressed
 
     private void txtAgeSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgeSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+        
     }//GEN-LAST:event_txtAgeSignUpKeyPressed
 
     private void txtAddressSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddressSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+       
     }//GEN-LAST:event_txtAddressSignUpKeyPressed
 
     private void txtCitySignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCitySignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+        
     }//GEN-LAST:event_txtCitySignUpKeyPressed
 
     private void txtStateSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+        
     }//GEN-LAST:event_txtStateSignUpKeyPressed
 
     private void btnPersonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonViewActionPerformed
@@ -383,155 +369,8 @@ public class PersonRecords extends javax.swing.JPanel {
 
     private void txtNameSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+        
     }//GEN-LAST:event_txtNameSignUpKeyPressed
-
-    private void btnUpdateSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateSignUpActionPerformed
-
-        if(tblPersonDirectory.getSelectedRow()<0) {
-            JOptionPane.showMessageDialog(this , "Please select a row to update.");
-            return;
-        }
-
-        DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp su = (SignUp) model.getValueAt(tblPersonDirectory.getSelectedRow(), 1);
-
-        if (tblPersonDirectory.getSelectedRowCount()==1) {
-
-            String Name = txtNameSignUp.getText();
-            String DoB = txtDoBSignUp.getText();
-            int Age = Integer.parseInt(txtAgeSignUp.getText());
-            String Address = txtAddressSignUp.getText();
-            String City = txtCitySignUp.getText();
-            String State = txtStateSignUp.getText();
-            int PinCode = Integer.parseInt(txtPinCodeSignUp.getText());
-            String CreatePassword = txtCreatePasswordSignUp.getText();
-            String ConfirmPassword = txtConfirmPasswordSignUp.getText();
-
-            if (!Pattern.matches("^\\d+$", txtAgeSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Age cannot be Negative!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (!Pattern.matches("^(1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0-9]|7[0-9]|8[0-9]|9[0-9])$", txtAgeSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Age should be between 1 to 99!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-
-            else if (!(Pattern.matches("^[0,1]?\\d{1}\\/(([0-2]?\\d{1})|([3][0,1]{1}))\\/(([1]{1}[9]{1}[9]{1}\\d{1})|([2-9]{1}\\d{3}))$", txtDoBSignUp.getText())))
-            {
-                JOptionPane.showMessageDialog(null, "Please enter date in mm/dd/yyyy format!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (!(Pattern.matches("^([0-9]{5})$", txtPinCodeSignUp.getText())))
-            {
-                JOptionPane.showMessageDialog(null, "Pin Code should be 5 digits only!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (!Pattern.matches("^(([a-z]|[0-9]){5})$", txtCreatePasswordSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (!txtCreatePasswordSignUp.getText().equals(txtConfirmPasswordSignUp.getText()))
-            {
-
-                JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtNameSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Name cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtDoBSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Date of Birth cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtAgeSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Age cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtAddressSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Address cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtCitySignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "City cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtStateSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "State cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtPinCodeSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Pin Code cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else if (Pattern.matches("^$", txtCreatePasswordSignUp.getText()))
-            {
-                JOptionPane.showMessageDialog(null, "Password cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-                btnUpdateSignUp.setEnabled(false);
-            }
-            else {
-
-                su.setName(Name);
-                su.setDoB(DoB);
-                su.setAge(Age);
-                su.setAddress(Address);
-                su.setCity(City);
-                su.setState(State);
-                su.setPinCode(PinCode);
-                su.setCreatePassword(CreatePassword);
-                su.setConfirmPassword(ConfirmPassword);
-
-                model.setValueAt(Name, tblPersonDirectory.getSelectedRow(), 1);
-                model.setValueAt(DoB, tblPersonDirectory.getSelectedRow(), 2);
-                model.setValueAt(Age, tblPersonDirectory.getSelectedRow(), 3);
-                model.setValueAt(Address, tblPersonDirectory.getSelectedRow(), 4);
-                model.setValueAt(City, tblPersonDirectory.getSelectedRow(), 5);
-                model.setValueAt(State, tblPersonDirectory.getSelectedRow(), 6);
-                model.setValueAt(PinCode, tblPersonDirectory.getSelectedRow(), 7);
-                model.setValueAt(CreatePassword, tblPersonDirectory.getSelectedRow(), 8);
-                //model.setValueAt(ConfirmPassword, tblPersonDirectory.getSelectedRow(), 8);
-
-                JOptionPane.showMessageDialog(this, "Person Details Updated");
-
-                txtNameSignUp.setText("");
-                txtDoBSignUp.setText("");
-                txtAgeSignUp.setText("");
-                txtAddressSignUp.setText("");
-                txtCitySignUp.setText("");
-                txtStateSignUp.setText("");
-                txtPinCodeSignUp.setText("");
-                txtCreatePasswordSignUp.setText("");
-                txtConfirmPasswordSignUp.setText("");
-
-                for (Doctor d : DoctorDirectory.getDoctorDirectory()){
-                    if (String.valueOf(d.getDoctorName()).equals(txtNameSignUp.getText())){
-                        d.setDoctorName(Name);
-                        d.setAge(Age);
-                        d.setAddress(Address);
-                        d.setCity(City);
-                        d.setState(State);
-                        d.setPinCode(PinCode);
-                    }
-                    populateTable();
-                }
-                }
-                }
-    }//GEN-LAST:event_btnUpdateSignUpActionPerformed
-
-    private void btnUpdateSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnUpdateSignUpKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateSignUpKeyPressed
 
     private void txtPinCodeSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPinCodeSignUpActionPerformed
         // TODO add your handling code here:
@@ -539,7 +378,7 @@ public class PersonRecords extends javax.swing.JPanel {
 
     private void txtPinCodeSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPinCodeSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+       
     }//GEN-LAST:event_txtPinCodeSignUpKeyPressed
 
     private void txtCreatePasswordSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreatePasswordSignUpActionPerformed
@@ -548,7 +387,7 @@ public class PersonRecords extends javax.swing.JPanel {
 
     private void txtCreatePasswordSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCreatePasswordSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+        
     }//GEN-LAST:event_txtCreatePasswordSignUpKeyPressed
 
     private void txtConfirmPasswordSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmPasswordSignUpActionPerformed
@@ -557,7 +396,7 @@ public class PersonRecords extends javax.swing.JPanel {
 
     private void txtConfirmPasswordSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConfirmPasswordSignUpKeyPressed
         // TODO add your handling code here:
-        btnUpdateSignUp.setEnabled(true);
+       
     }//GEN-LAST:event_txtConfirmPasswordSignUpKeyPressed
 
     private void txtSearchPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchPersonActionPerformed
@@ -575,7 +414,6 @@ public class PersonRecords extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPersonView;
-    private javax.swing.JButton btnUpdateSignUp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

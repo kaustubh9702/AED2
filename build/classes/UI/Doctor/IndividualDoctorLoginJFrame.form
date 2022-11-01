@@ -89,6 +89,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnCreateVitals">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Create Vitals"/>
               </Properties>
               <Events>
@@ -97,6 +100,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnViewVitalsHistory">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;center&gt;&#xa;View &lt;br&gt; Vitals &lt;br&gt; History&#xa;&lt;/center&gt;&#xa;&lt;/html&gt;"/>
               </Properties>
               <Events>
@@ -105,6 +111,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnLogOut">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Semibold" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Log Out"/>
               </Properties>
               <Events>

@@ -57,6 +57,7 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnRaiseEncounter.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnRaiseEncounter.setText("Create Appointment");
         btnRaiseEncounter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +65,7 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnEncounterRecords.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnEncounterRecords.setText("<html> <center> View all <br> Records </center> </html>");
         btnEncounterRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +73,7 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogOut.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

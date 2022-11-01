@@ -12,6 +12,7 @@ import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
 import UI.SystemAdmin.AdminJFrame;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -85,6 +86,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnUpdateHospital.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnUpdateHospital.setText("Update");
         btnUpdateHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +110,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblCity.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCity.setText("Community Name");
 
         txtCreatePassword.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +124,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblState.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblState.setText("Role");
 
         txtConfirmPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -134,6 +138,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblPinCode.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblPinCode.setText("Pin Code:");
 
         txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -159,6 +164,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblCreatePassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCreatePassword.setText("Update Password:");
 
         txtHospitalName.addActionListener(new java.awt.event.ActionListener() {
@@ -172,10 +178,13 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblConfirmPassword.setText("Confirm Password:");
 
+        lblDoB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblDoB.setText("Community Admin Name");
 
+        lblName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblName.setText("Name of the Hospital:");
 
         jLabel1.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
@@ -215,6 +224,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblHospitalDirectory);
 
+        btnHospitalView.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnHospitalView.setText("View");
         btnHospitalView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,6 +232,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnHospitalDelete.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnHospitalDelete.setText("Delete");
         btnHospitalDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,6 +240,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogOut1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         btnLogOut1.setText("Log Out");
         btnLogOut1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -346,6 +358,43 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) tblHospitalDirectory.getModel();
         Hospital h = (Hospital) model.getValueAt(tblHospitalDirectory.getSelectedRow(), 1);
 
+        if (!(Pattern.matches("^([0-9]{5})$", txtPinCode.getText())))
+        {
+          JOptionPane.showMessageDialog(null, "Pin Code should be 5 digits only!", "Error", JOptionPane.ERROR_MESSAGE);
+         
+        }
+        else if (!Pattern.matches("^(([a-z]|[0-9]|[A-Z]){5})$", txtCreatePassword.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else if (!txtCreatePassword.getText().equals(txtConfirmPassword.getText()))
+        {
+                    
+             JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+        }
+        else if (Pattern.matches("^$", txtCreatePassword.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "Password cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+            
+         }
+        else if (Pattern.matches("^$", txtCity.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "City cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+            
+         }
+        else if (Pattern.matches("^$", txtState.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "State cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else if (Pattern.matches("^$", txtPinCode.getText())) 
+         {
+             JOptionPane.showMessageDialog(null, "Pin Code cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+             
+         }
+        else{
         if (tblHospitalDirectory.getSelectedRowCount()==1) {
 
             String HospitalName = txtHospitalName.getText();
@@ -372,7 +421,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             model.setValueAt(CreatePassword, tblHospitalDirectory.getSelectedRow(), 6);
             //model.setValueAt(ConfirmPassword, tblPersonDirectory.getSelectedRow(), 8);
 
-            JOptionPane.showMessageDialog(this, "Person Details Updated");
+            JOptionPane.showMessageDialog(this, "Details Updated");
 
             txtHospitalName.setText("");
             txtCommunity.setText("");
@@ -383,6 +432,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             txtConfirmPassword.setText("");
 
             populateTable();
+        }
     }//GEN-LAST:event_btnUpdateHospitalActionPerformed
     }
     private void btnUpdateHospitalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnUpdateHospitalKeyPressed

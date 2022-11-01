@@ -104,7 +104,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         });
 
         btnDoctorRecords.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        btnDoctorRecords.setText("<html>\n<center>\nDoctor <br> Records\n</center>\n</html>");
+        btnDoctorRecords.setText("<html> <center> Doctor <br> Records </center> </html>");
         btnDoctorRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoctorRecordsActionPerformed(evt);
@@ -112,7 +112,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         });
 
         btnCreateDoctor.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
-        btnCreateDoctor.setText("<html>\n<center>\nCreate <br> Doctor\n</center>\n</html>");
+        btnCreateDoctor.setText("<html> <center> Create <br> Doctor </center> </html>");
         btnCreateDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateDoctorActionPerformed(evt);

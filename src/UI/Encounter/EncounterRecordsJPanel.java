@@ -11,6 +11,7 @@ import Model.Hospital.HospitalDirectory;
 import Model.Patient.Patient;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -164,6 +165,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
 
         jLabel4.setText("Hospital Name:");
 
+        btnView.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +173,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUpdate.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,7 +232,6 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                                     .addComponent(lblName)
                                     .addGap(18, 18, 18)
                                     .addComponent(txtDoctorName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(btnUpdate)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel4)
@@ -237,7 +239,10 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                                     .addGap(20, 20, 20)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtEncounterID)
-                                        .addComponent(txtHospitalName)))))))
+                                        .addComponent(txtHospitalName)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btnUpdate)
+                                    .addGap(28, 28, 28))))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -281,7 +286,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                     .addComponent(lblAddress2))
                 .addGap(18, 18, 18)
                 .addComponent(btnUpdate)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -355,6 +360,18 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
 
         DefaultTableModel model = (DefaultTableModel) tblEncounterDirectory.getModel();
         Encounter su = (Encounter) model.getValueAt(tblEncounterDirectory.getSelectedRow(), 0);
+        
+        if (!(Pattern.matches("^[0,1]?\\d{1}\\/(([0-2]?\\d{1})|([3][0,1]{1}))\\/(([1]{1}[9]{1}[9]{1}\\d{1})|([2-9]{1}\\d{3}))$", txtDate.getText())))
+            {
+                JOptionPane.showMessageDialog(null, "Please enter date in mm/dd/yyyy format!", "Error", JOptionPane.ERROR_MESSAGE);
+     
+            }
+        else if (Pattern.matches("^$", txtDate.getText()))
+            {
+                JOptionPane.showMessageDialog(null, "Date of Birth cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+               
+            }
+        else{
 
         if (tblEncounterDirectory.getSelectedRowCount()==1) {
             
@@ -376,6 +393,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
             txtTimeStamp.setText("");
 
             populateTable();
+        }
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     }
